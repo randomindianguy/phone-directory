@@ -1,9 +1,20 @@
 import React, {Component} from 'react';
 import Header from './Header';
 import './App.css';
+
 function App() {
-  // let x = 2;
-  // let y = 3;
+  let subscribers = [
+    {
+      id: 1,
+      name: "Sid",
+      phone: 9930394228
+    },
+    {
+      id: 2,
+      name: "Sunny",
+      phone: 1122334455
+    }
+  ]
   return (
     <div>
       <Header />
@@ -12,11 +23,21 @@ function App() {
 
         <div className='grid-container heading-container'>
           <span className='grid-item name-heading'>Name</span>
-          <span className='grid-item phone-heading'>Name</span>
+          <span className='grid-item phone-heading'>Phone</span>
         </div>
+
+        {
+          subscribers.map(sub => {
+            return <div ley={sub.id} className='grid-container'>
+            <span className='grid-item'>{sub.name}</span>
+            <span className='grid-item'>{sub.phone}</span>
+            </div>
+          })
+        }
+
+        
       </div>
-    {/* <label htmlFor="name">Name: </label>
-    <input id="name" type="text" defaultValue={x+y} /> */}
+   
     </div>
   );
 }
