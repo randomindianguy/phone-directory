@@ -1,23 +1,21 @@
-import React from 'react';
+import React, {Component} from 'react';
+import Header from './Header';
 
-import React, { Component } from 'react';
-
-class Header extends Component {
-   render() {
-       return (
-           <div className="header">
-               Phone Directory
-           </div>
-       )
-   }
-}
-    // <div id="module">
-    //     <p>ReactJS</p>
-    // </div>
-
-    // React.createElement("div", {id: "module"}, 
-    //   React.createElement("p",null,"ReactJS")
-    // )
+function App() {
+  // let x = 2;
+  // let y = 3;
+  return (
+    <div>
+      <Header />
+      <button>Add</button>
+      <div>
+        <span> Name </span>
+        <br />
+        <span> Phone </span>
+      </div>
+    {/* <label htmlFor="name">Name: </label>
+    <input id="name" type="text" defaultValue={x+y} /> */}
+    </div>
   );
 }
 
