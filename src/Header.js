@@ -3,7 +3,7 @@ import './Header.css';
 const Header = function(props) {
     return(
         <div className='header'>
-            {props.instructor}
+            {props.heading}
         </div>
     )
 } // functional component
