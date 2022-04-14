@@ -2,7 +2,15 @@ import React, {Component} from 'react';
 import Header from './Header';
 import './App.css';
 
-function App() {
+
+
+class App extends Component {
+  
+  clickHandler(message) {
+    alert(message);
+  }
+  
+  render(){
   let subscribers = [
     {
       id: 1,
@@ -32,7 +40,7 @@ function App() {
             <span className='grid-item'>{sub.name}</span>
             <span className='grid-item'>{sub.phone}</span>
             <span className="grid-item action-btn-container">
-                  <button className="custom-btn delete-btn">Delete</button>
+                  <button className="custom-btn delete-btn" onClick={this.clickHandler.bind(this, "Delete Handler Clicked")}>Delete</button>
             </span>
             </div>
           })
@@ -46,6 +54,7 @@ function App() {
    
     </div>
   );
+      }
 }
 
 export default App;
